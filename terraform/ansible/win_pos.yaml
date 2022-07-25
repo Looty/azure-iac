@@ -1,0 +1,10 @@
+---
+- name: powershell module demo
+  hosts: azure_vm
+  become: false
+  gather_facts: false
+  tasks:
+    - name: test connection
+      ansible.windows.win_powershell:
+        script: |
+          Write-Host "hello kobi"

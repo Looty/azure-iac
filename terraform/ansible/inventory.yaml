@@ -1,0 +1,12 @@
+all:
+  children:
+    vms:
+      hosts:
+        azure_vm:
+          ansible_host: 13.81.54.25
+      vars:
+        ansible_user: adminuser
+        ansible_password: Aa123456!
+        ansible_port: 5986
+        ansible_connection: winrm
+        ansible_winrm_server_cert_validation: ignore
